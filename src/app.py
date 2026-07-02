@@ -21,67 +21,65 @@ app.mount("/static", StaticFiles(directory=os.path.join(Path(__file__).parent,
 
 # In-memory activity database
 activities = {
-        "Chess Club": {
-            "description": "Learn strategies and compete in chess tournaments",
-            "schedule": "Fridays, 3:30 PM - 5:00 PM",
-            "max_participants": 12,
-            "participants": ["michael@mergington.edu", "daniel@mergington.edu"]
-        },
-        "Programming Class": {
-            "description": "Learn programming fundamentals and build software projects",
-            "schedule": "Tuesdays and Thursdays, 3:30 PM - 4:30 PM",
-            "max_participants": 20,
-            "participants": ["emma@mergington.edu", "sophia@mergington.edu"]
-        },
-        "Gym Class": {
-            "description": "Physical education and sports activities",
-            "schedule": "Mondays, Wednesdays, Fridays, 2:00 PM - 3:00 PM",
-            "max_participants": 30,
-            "participants": ["john@mergington.edu", "olivia@mergington.edu"]
-        }
+    "Chess Club": {
+        "description": "Learn strategies and compete in chess tournaments",
+        "schedule": "Fridays, 3:30 PM - 5:00 PM",
+        "max_participants": 12,
+        "participants": ["michael@mergington.edu", "daniel@mergington.edu"]
+    },
+    "Programming Class": {
+        "description": "Learn programming fundamentals and build software projects",
+        "schedule": "Tuesdays and Thursdays, 3:30 PM - 4:30 PM",
+        "max_participants": 20,
+        "participants": ["emma@mergington.edu", "sophia@mergington.edu"]
+    },
+    "Gym Class": {
+        "description": "Physical education and sports activities",
+        "schedule": "Mondays, Wednesdays, Fridays, 2:00 PM - 3:00 PM",
+        "max_participants": 30,
+        "participants": ["john@mergington.edu", "olivia@mergington.edu"]
     }
+}
 
-    # Additional activities added by maintainer
-    activities.update(
-        {
-        "Soccer Team": {
-            "description": "Team training and matches for students who love soccer",
-            "schedule": "Mondays and Thursdays, 4:00 PM - 6:00 PM",
-            "max_participants": 25,
-            "participants": []
-        },
-        "Swimming Club": {
-            "description": "Swim practice, technique improvement and occasional meets",
-            "schedule": "Wednesdays, 4:30 PM - 6:00 PM",
-            "max_participants": 15,
-            "participants": []
-        },
-        "Drama Club": {
-            "description": "Acting, stagecraft and production for school plays",
-            "schedule": "Tuesdays, 4:00 PM - 6:00 PM",
-            "max_participants": 20,
-            "participants": []
-        },
-        "Art Studio": {
-            "description": "Open studio for drawing, painting and mixed media projects",
-            "schedule": "Fridays, 3:30 PM - 5:00 PM",
-            "max_participants": 15,
-            "participants": []
-        },
-        "Debate Team": {
-            "description": "Prepare for debates, public speaking and research competitions",
-            "schedule": "Wednesdays, 3:30 PM - 5:00 PM",
-            "max_participants": 20,
-            "participants": []
-        },
-        "Science Club": {
-            "description": "Hands-on experiments, guest talks and science fairs",
-            "schedule": "Thursdays, 4:00 PM - 5:30 PM",
-            "max_participants": 18,
-            "participants": []
-        }
+# Additional activities added by maintainer
+activities.update({
+    "Soccer Team": {
+        "description": "Team training and matches for students who love soccer",
+        "schedule": "Mondays and Thursdays, 4:00 PM - 6:00 PM",
+        "max_participants": 25,
+        "participants": []
+    },
+    "Swimming Club": {
+        "description": "Swim practice, technique improvement and occasional meets",
+        "schedule": "Wednesdays, 4:30 PM - 6:00 PM",
+        "max_participants": 15,
+        "participants": []
+    },
+    "Drama Club": {
+        "description": "Acting, stagecraft and production for school plays",
+        "schedule": "Tuesdays, 4:00 PM - 6:00 PM",
+        "max_participants": 20,
+        "participants": []
+    },
+    "Art Studio": {
+        "description": "Open studio for drawing, painting and mixed media projects",
+        "schedule": "Fridays, 3:30 PM - 5:00 PM",
+        "max_participants": 15,
+        "participants": []
+    },
+    "Debate Team": {
+        "description": "Prepare for debates, public speaking and research competitions",
+        "schedule": "Wednesdays, 3:30 PM - 5:00 PM",
+        "max_participants": 20,
+        "participants": []
+    },
+    "Science Club": {
+        "description": "Hands-on experiments, guest talks and science fairs",
+        "schedule": "Thursdays, 4:00 PM - 5:30 PM",
+        "max_participants": 18,
+        "participants": []
     }
-)
+})
 
 
 @app.get("/")
